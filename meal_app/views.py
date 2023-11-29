@@ -64,7 +64,8 @@ def task(request):
     return render(request, 'meal_app/tasks.html')
 
 def meals(request):
-    return render(request, 'meal_app/meals.html')
+    context = {'meals_data': meals_data}
+    return render(request, 'meal_app/meals.html', context)
 
 def submission(request):
     return render(request, 'meal_app/submission.html')

@@ -3,16 +3,27 @@
 
 {% block Content %}
 
-	<br><br>
 
 	<div class="container">
+		<ul class="list-unstyled d-flex flex-wrap justify-content-start">
 
-		<!-- Content here -->
+			<!-- Cards -->
+			{% for each in meals_data %}
+				<li class="col-lg-3 col-md-4 col-sm-6 mb-3">
+					<div class="card" style="width: 18rem;">
+						<img src="{{ each.strMealThumb }}" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">{{ each.strMeal }}</h5>
+							<p class="card-text">(Id:{{ each.idMeal }})</p>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						</div>
+					</div>
+				</li>
+			{% endfor %}
+			<!-- Repeat the structure for each card -->
 
-		<h2>Meals page.</h2>
-
+		</ul>
 	</div>
 
-	<br><br>
 
 {% endblock %}
