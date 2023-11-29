@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 
-meals = [
+meals_data = [
     {
         "strMeal": "BeaverTails",
         "strMealThumb": "https://www.themealdb.com/images/media/meals/ryppsv1511815505.jpg",
@@ -62,6 +62,9 @@ def home(request):
 
 def task(request):
     return render(request, 'meal_app/tasks.html')
+
+def meals(request):
+    return render(request, 'meal_app/meals.html')
 
 def submission(request):
     return render(request, 'meal_app/submission.html')
