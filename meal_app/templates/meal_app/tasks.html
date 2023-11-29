@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block Content %}
 
@@ -19,7 +20,7 @@
 			<li><span style="font-family: arial, helvetica, sans-serif;"><span style="font-size: 19px;">You need to add bootstrap file in the base.html and then inherit the file inside the index.html</span><span style="font-size: 19px;">.</span></span></li>
 			<li><span style="font-size: 19px; font-family: arial, helvetica, sans-serif;">Finally show the required items in the index.html file.</span></li>
 		</ul>
-		<img src="" alt="sample_task_image">
+		<img src="{% static 'meal_image.png' %}" alt="sample_task_image">
 
 	</div>
 
